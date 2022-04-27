@@ -1,7 +1,10 @@
 @if ($errors->any())
     <div {!! $attributes->merge(['class' => 'alert alert-danger alert-dismissible fade show']) !!} role="alert">
-        <i class="bi bi-exclamation-octagon me-1"></i>
-        <div class="font-weight-bold">{{ __('Oops! Sepertinya ada yang tidak beres.') }}</div>
+
+        <div class="font-weight-bold">
+            <i class="bi bi-exclamation-octagon me-1"></i>
+            {{ __('Oops! Sepertinya ada yang tidak beres.') }}
+        </div>
         
         <ul>
             @foreach ($errors->all() as $error)
