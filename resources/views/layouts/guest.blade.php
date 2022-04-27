@@ -13,6 +13,10 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
+        <!-- Icons -->
+        <link href="{{ asset('NiceAdmin/assets/img/favicon.png') }}" rel="icon">
+        <link href="{{ asset('NiceAdmin/assets/img/apple-touch-icon.png"') }} rel="apple-touch-icon">
+
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
