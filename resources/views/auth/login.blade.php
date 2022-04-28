@@ -16,7 +16,8 @@
         <x-jet-validation-errors class="mb-3 rounded-0" />
 
         @if (session('status'))
-            <div class="alert alert-success mb-3 rounded-0" role="alert">
+            <div class="alert alert-success alert-dismissible fade show mb-3 rounded-0" role="alert">
+                <i class="bi bi-check2-circle"></i>
                 {{ session('status') }}
             </div>
         @endif
@@ -60,11 +61,11 @@
                         {{ __('Belum punya akun?') }}
                     </a>
                     
-                    @if (Route::has('password.request'))
+                    {{-- @if (Route::has('password.request'))
                     <a class="text-muted me-3" href="{{ route('password.request') }}">
                         {{ __('Lupa password?') }}
                     </a>
-                    @endif
+                    @endif --}}
                 </p>     
             </div>
         </form>

@@ -7,11 +7,12 @@
         <div class="card-body">
 
             <div class="mb-3">
-                {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+                {{ __('Lupa passwordmu? Tidak masalah. Biarkan kami tahu alamat e-mail kamu dan kami akan mengirimkan sebuah link yang berisi reset password mengizinkanmu untuk membuat yang baru.') }}
             </div>
 
             @if (session('status'))
-                <div class="alert alert-success" role="alert">
+                <div class="alert alert-success alert-dismissible fade show mb-3 rounded-0" role="alert">
+                    <i class="bi bi-check2-circle"></i>
                     {{ session('status') }}
                 </div>
             @endif
@@ -23,12 +24,16 @@
 
                 <div class="mb-3">
                     <x-jet-label value="Email" />
-                    <x-jet-input type="email" name="email" :value="old('email')" required autofocus />
+                    
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">{{ __('@') }}</span>
+                        <x-jet-input type="email" name="email" :value="old('email')" required autofocus  class="form-control"/>
+                    </div>
                 </div>
 
                 <div class="d-flex justify-content-end mt-4">
                     <x-jet-button>
-                        {{ __('Email Password Reset Link') }}
+                        {{ __('Kirim link reset password') }}
                     </x-jet-button>
                 </div>
             </form>
