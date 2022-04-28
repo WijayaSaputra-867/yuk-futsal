@@ -3,6 +3,7 @@
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
         </x-slot>
+
         <div class="pt-4 pb-2">
             <h5 class="card-title text-center pb-0 fs-4">
                 {{ __('Selamat datang!') }}
@@ -11,6 +12,7 @@
                 {{ __('Silahkan masukkan email dan password Anda.') }}
             </p>
         </div>
+
         <x-jet-validation-errors class="mb-3 rounded-0" />
 
         @if (session('status'))
@@ -21,7 +23,7 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="mb-3">
-                <x-jet-label value="{{ __('Email') }}" />
+                <x-jet-label value="{{ __('E-mail') }}" />
                 <div class="input-group has-validation">
                     <span class="input-group-text" id="inputGroupPrepend">{{ __('@') }}</span>
                     <x-jet-input class="{{ $errors->has('email') ? 'is-invalid' : '' }} form-control" type="email" name="email" :value="old('email')" required />
